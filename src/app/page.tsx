@@ -106,7 +106,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      
+
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">About</h2>
@@ -152,7 +152,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="blogs">
+      {/* <section id="blogs">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Recent Blog Posts</h2>
@@ -188,18 +188,38 @@ export default function Page() {
             </div>
           </BlurFade>
         </div>
+      </section> */}
+
+      <section id="workExperience">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+            <h2 className="text-xl font-bold">Work Experience</h2>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 10}>
+            <div className="flex flex-col space-y-4">
+              {DATA.work.map((job) => (
+                <ProjectCardDynamic
+                  key={job.company}
+                  title={job.company}
+                  description={job.description}
+                  dates={`${job.start} - ${job.end}`}
+                />
+              ))}
+            </div>
+          </BlurFade>
+        </div>
       </section>
 
-      <section id="contributions">
+      {/* <section id="contributions">
         <BlurFade delay={BLUR_FADE_DELAY * 10}>
           <h2 className="text-xl font-bold">GitHub Contributions</h2>
           <GithubContributions />
         </BlurFade>
-      </section>
+      </section> */}
       <section id="projects">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className="text-xl font-bold">Featured Projects</h2>
+            <h2 className="text-xl font-bold">Side Projects</h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 8}>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -224,44 +244,7 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
-      <section id="hackathons">
-        <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 13}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Hackathons
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  I like building things
-                </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  During my college years, I participated in some hackathons.
-                </p>
-              </div>
-            </div>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.hackathons.map((project, id) => (
-                <BlurFade
-                  key={project.title + project.dates}
-                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
-                >
-                  <HackathonCardDynamic
-                    title={project.title}
-                    description={project.description}
-                    location={project.location}
-                    dates={project.dates}
-                    image={project.image}
-                    links={project.links}
-                  />
-                </BlurFade>
-              ))}
-            </ul>
-          </BlurFade>
-        </div>
-      </section>
+
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
@@ -286,41 +269,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Gadgets Section */}
-      <section id="gadgets">
-        <BlurFade delay={BLUR_FADE_DELAY * 9}>
-          <FeaturedGadgets />
-        </BlurFade>
-      </section>
-
-      {/* Videos Section */}
-      <section id="videos">
-        <BlurFade delay={BLUR_FADE_DELAY * 10}>
-          <div className="space-y-4">
-            <h2 className="text-xl font-bold">Recent Videos</h2>
-            <div className="grid gap-6 sm:grid-cols-2">
-              {DATA.videos.slice(-2).map((video, idx) => (
-                <BlurFade key={video.url} delay={BLUR_FADE_DELAY * 11 + idx * 0.05}>
-                  <VideoCard video={video} />
-                </BlurFade>
-              ))}
-              <BlurFade delay={BLUR_FADE_DELAY * 12}>
-                <Link
-                  href="/videos"
-                  className="mt-4 block"
-                >
-                  <RainbowButton
-                    className="w-full sm:w-[160px] px-4 py-2 group transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] font-bold text-center"
-                  >
-                    All Videos →
-                  </RainbowButton>
-                </Link>
-              </BlurFade>
-            </div>
-          </div>
-        </BlurFade>
-      </section>
-
       <section id="contact">
         <BlurFade delay={BLUR_FADE_DELAY * 16}>
           <div className="space-y-4">
@@ -328,11 +276,11 @@ export default function Page() {
             <h2 className="text-xl font-medium">Feel free to reach out to me via email:</h2>
 
             <a
-              href="mailto:prasen.nayak@hotmail.com"
+              href={DATA.contact.social.email.url}
               className="flex items-center gap-2 underline underline-offset-4 hover:opacity-70 transition-opacity"
             >
               <Icons.email className="size-4" />
-              prasen.nayak@hotmail.com
+              Gmail
             </a>
 
             <div className="mt-8">
@@ -350,25 +298,17 @@ export default function Page() {
           </div>
         </BlurFade>
       </section>
-<footer className="mt-20 border-t py-8">
-  <BlurFade delay={BLUR_FADE_DELAY * 15}>
-    <div className="container mx-auto px-4">
-      <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-        <div className="text-sm text-muted-foreground">
-          Copyright &copy;{new Date().getFullYear()} {DATA.name}. All rights reserved.
-        </div>
-        <div className="flex space-x-4">
-          <Link href="/sitemap.xml" className="text-sm text-muted-foreground hover:text-foreground">
-            Sitemap
-          </Link>
-          <Link href="/rss.xml" className="text-sm text-muted-foreground hover:text-foreground">
-            RSS
-          </Link>
-        </div>
-      </div>
-    </div>
-  </BlurFade>
-</footer>
+      <footer className="mt-20 border-t py-8">
+        <BlurFade delay={BLUR_FADE_DELAY * 15}>
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <div className="text-sm text-muted-foreground">
+                Copyright &copy;{new Date().getFullYear()} {DATA.name}. All rights reserved.
+              </div>
+            </div>
+          </div>
+        </BlurFade>
+      </footer>
     </main>
   );
 }

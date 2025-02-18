@@ -1,16 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  
+
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'github.com',
+        protocol: "https",
+        hostname: "github.com",
       },
       {
-        protocol: 'https',
-        hostname: 'avatars.githubusercontent.com',
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "imgbed.alonglfb.com",
+        port: "",
+        pathname: "/file/**",
+        search: "",
       },
     ],
     minimumCacheTTL: 60,
@@ -18,31 +25,31 @@ const nextConfig = {
 
   headers: async () => [
     {
-      source: '/:path*',
+      source: "/:path*",
       headers: [
         {
-          key: 'X-DNS-Prefetch-Control',
-          value: 'on'
+          key: "X-DNS-Prefetch-Control",
+          value: "on",
         },
         {
-          key: 'X-Frame-Options',
-          value: 'DENY'
+          key: "X-Frame-Options",
+          value: "DENY",
         },
         {
-          key: 'Strict-Transport-Security',
-          value: 'max-age=31536000; includeSubDomains'
+          key: "Strict-Transport-Security",
+          value: "max-age=31536000; includeSubDomains",
         },
         {
-          key: 'Cache-Control',
-          value: 'public, max-age=31536000, immutable'
-        }
-      ]
-    }
+          key: "Cache-Control",
+          value: "public, max-age=31536000, immutable",
+        },
+      ],
+    },
   ],
 
   // Optimize builds
   swcMinify: true,
-  
+
   // Compress outputs
   compress: true,
 
@@ -63,35 +70,35 @@ const nextConfig = {
     return [
       // Add any specific redirects here if needed
       {
-        source: '/home',
-        destination: '/',
+        source: "/home",
+        destination: "/",
         permanent: true,
-      }
-    ]
+      },
+    ];
   },
 
   // Update headers for better SEO
   async headers() {
     return [
       {
-        source: '/:path*',
+        source: "/:path*",
         headers: [
           {
-            key: 'X-Robots-Tag',
-            value: 'index, follow'
+            key: "X-Robots-Tag",
+            value: "index, follow",
           },
           {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
           },
           {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          }
-        ]
-      }
-    ]
-  }
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

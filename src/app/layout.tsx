@@ -23,37 +23,37 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: "Prasenjit Nayak | Full Stack Developer",
-    template: `%s | Prasenjit Nayak`,
+    default: "Along Li | iOS Developer",
+    template: `%s | Along Li`,
   },
-  description: "Prasenjit Nayak is a Full Stack Developer from India, with expertise in React, Next.js, TypeScript and Node.js. I create modern web applications and have a passion for clean, efficient code. View my portfolio to see my latest projects and technical blog posts.",
-  keywords: ["Prasenjit Nayak", "Full Stack Developer", "React Developer", "Next.js Developer", "TypeScript Developer", "Node.js Developer", "Web Developer India", "Software Engineer"],
-  authors: [{ name: "Prasenjit Nayak" }],
-  creator: "Prasenjit Nayak",
-  publisher: "Prasenjit Nayak",
+  description: "Along Li is a iOS Developer from China, with expertise in Objective-C and Swift. I create iOS applications and have a passion for clean, efficient code. View my portfolio to see my latest projects",
+  keywords: ["Along Li", "iOS Developer", "React Developer", "Next.js Developer", "TypeScript Developer", "Node.js Developer", "Web Developer India", "Software Engineer"],
+  authors: [{ name: "Along Li" }],
+  creator: "Along Li",
+  publisher: "Along Li",
   alternates: {
     canonical: DATA.url,
   },
   openGraph: {
-    title: "Prasenjit Nayak | Full Stack Developer",
-    description: "Full Stack Developer specializing in React, Next.js, TypeScript and Node.js. Check out my portfolio, projects and blog posts.",
+    title: "Along Li | iOS Developer",
+    description: "Along Li is a iOS Developer from China, with expertise in Objective-C and Swift. I create iOS applications and have a passion for clean, efficient code. View my portfolio to see my latest projects",
     url: DATA.url,
-    siteName: "Prasenjit Nayak - Portfolio",
+    siteName: "Along Li - Portfolio",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: `${DATA.url}/me.png`,
+        url: `/along ava3.jpg`,
         width: 1200,
         height: 630,
-        alt: "Prasenjit Nayak - Full Stack Developer"
+        alt: "Along Li - iOS Developer"
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Prasenjit Nayak | Full Stack Developer',
-    description: 'Full Stack Developer specializing in React, Next.js, TypeScript and Node.js',
+    title: 'Along Li | iOS Developer',
+    description: 'iOS Developer specializing in Objective-C and Swift.',
     images: [`${DATA.url}/me.png`],
   },
   robots: {
@@ -69,39 +69,37 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicons/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      {
+        url: "/favicons/web-app-manifest-192x192.png",
+        sizes: "192x192",
+        type: "image/png"
+      },
+      {
+        url: "/favicons/web-app-manifest-512x512.png",
+        sizes: "512x512",
+        type: "image/png"
+      }
     ],
+    shortcut: ["/favicons/web-app-manifest-192x192.png"],
     apple: [
-      { url: "/favicons/apple-icon-57x57.png", sizes: "57x57", type: "image/png" },
-      { url: "/favicons/apple-icon-60x60.png", sizes: "60x60", type: "image/png" },
-      { url: "/favicons/apple-icon-72x72.png", sizes: "72x72", type: "image/png" },
-      { url: "/favicons/apple-icon-76x76.png", sizes: "76x76", type: "image/png" },
-      { url: "/favicons/apple-icon-114x114.png", sizes: "114x114", type: "image/png" },
-      { url: "/favicons/apple-icon-120x120.png", sizes: "120x120", type: "image/png" },
-      { url: "/favicons/apple-icon-144x144.png", sizes: "144x144", type: "image/png" },
-      { url: "/favicons/apple-icon-152x152.png", sizes: "152x152", type: "image/png" },
-      { url: "/favicons/apple-icon-180x180.png", sizes: "180x180", type: "image/png" },
+      {
+        url: "/favicons/web-app-manifest-192x192.png",
+        sizes: "192x192",
+        type: "image/png"
+      }
     ],
     other: [
       {
-        rel: "icon",
-        type: "image/png",
-        sizes: "192x192",
-        url: "/favicons/android-icon-192x192.png",
-      },
-      {
-        rel: "manifest",
-        url: "/favicons/manifest.json",
-      },
+        rel: "apple-touch-icon",
+        url: "/favicons/web-app-manifest-192x192.png",
+      }
     ],
   },
   manifest: "/favicons/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Prasenjit Nayak",
+    title: "Along Li",
   },
   other: {
     "msapplication-TileColor": "#ffffff",
@@ -144,7 +142,7 @@ export default function RootLayout({
               })(window, document, "clarity", "script", "p73rco1nfp");
             `}
           </Script>
-          <JsonLd />
+          {/* <JsonLd /> */}
           <ScrollProgress />
           <ThemeProvider attribute="class" defaultTheme="light">
             <TooltipProvider delayDuration={0}>

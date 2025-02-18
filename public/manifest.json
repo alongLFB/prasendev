@@ -1,6 +1,6 @@
 {
-  "name": "Prasenjit Nayak",
-  "short_name": "prasen.dev",
+  "name": "Along Li",
+  "short_name": "Along",
   "icons": [
     {
       "src": "/favicons/android-chrome-192x192.png",
@@ -8,7 +8,7 @@
       "type": "image/png"
     },
     {
-      "src": "/favicons/android-chrome-512x512.png", 
+      "src": "/favicons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
