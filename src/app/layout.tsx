@@ -129,7 +129,7 @@ export default function RootLayout({
 
         {/* Main content */}
         <div className="relative z-10 max-w-2xl mx-auto py-12 sm:py-24 px-6">
-          <GoogleAnalytics gaId="G-XVF0SFD4GW" />
+          <GoogleAnalytics gaId="G-9K1SY0ENH1" />
           <Script
             id="microsoft-clarity"
             strategy="afterInteractive"
