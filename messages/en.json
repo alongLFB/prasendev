@@ -1,0 +1,13 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "greeting": "Hi, I'm {name} 👨🏻‍💻",
+    "description": "A rookie software engineer.",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Side Projects",
+    "contact": "Contact",
+    "workexperience": "Work Experience",
+    "education": "Education"
+  }
+}

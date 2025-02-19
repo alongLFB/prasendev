@@ -1,3 +1,5 @@
+import createNextIntlPlugin from "next-intl/plugin";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -23,30 +25,6 @@ const nextConfig = {
     minimumCacheTTL: 60,
   },
 
-  headers: async () => [
-    {
-      source: "/:path*",
-      headers: [
-        {
-          key: "X-DNS-Prefetch-Control",
-          value: "on",
-        },
-        {
-          key: "X-Frame-Options",
-          value: "DENY",
-        },
-        {
-          key: "Strict-Transport-Security",
-          value: "max-age=31536000; includeSubDomains",
-        },
-        {
-          key: "Cache-Control",
-          value: "public, max-age=31536000, immutable",
-        },
-      ],
-    },
-  ],
-
   // Optimize builds
   swcMinify: true,
 
@@ -68,7 +46,6 @@ const nextConfig = {
   // Add redirect handling
   async redirects() {
     return [
-      // Add any specific redirects here if needed
       {
         source: "/home",
         destination: "/",
@@ -77,19 +54,31 @@ const nextConfig = {
     ];
   },
 
-  // Update headers for better SEO
+  // ✅ 修正：去掉重复的 `headers()`
   async headers() {
     return [
       {
         source: "/:path*",
         headers: [
           {
-            key: "X-Robots-Tag",
-            value: "index, follow",
+            key: "X-DNS-Prefetch-Control",
+            value: "on",
+          },
+          {
+            key: "X-Frame-Options",
+            value: "DENY",
+          },
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=31536000; includeSubDomains",
           },
           {
             key: "Cache-Control",
             value: "public, max-age=31536000, immutable",
+          },
+          {
+            key: "X-Robots-Tag",
+            value: "index, follow",
           },
           {
             key: "X-Content-Type-Options",
@@ -101,4 +90,6 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin();
+
+export default withNextIntl(nextConfig);

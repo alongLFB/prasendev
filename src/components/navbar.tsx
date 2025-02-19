@@ -10,6 +10,7 @@ import {
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { LanguageSwitcher } from './language-switcher'
 
 export default function Navbar() {
   return (
@@ -44,6 +45,17 @@ export default function Navbar() {
             </TooltipTrigger>
             <TooltipContent>
               <p>Theme</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
+
+        <DockIcon>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <LanguageSwitcher />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Language</p>
             </TooltipContent>
           </Tooltip>
         </DockIcon>
