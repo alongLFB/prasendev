@@ -131,7 +131,7 @@ export default async function LocaleLayout({
                     <div className="relative z-10 max-w-2xl mx-auto py-12 sm:py-24 px-6">
                         <GoogleAnalytics gaId="G-9K1SY0ENH1" />
                         <ScrollProgress />
-                        <ThemeProvider attribute="class" defaultTheme="light">
+                        <ThemeProvider attribute="class" defaultTheme="system">
                             <TooltipProvider delayDuration={0}>
                                 {children}
                                 <Analytics />
