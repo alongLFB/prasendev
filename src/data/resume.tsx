@@ -3,6 +3,31 @@ import { Description } from "@radix-ui/react-dialog";
 import { url } from "inspector";
 import { HomeIcon, NotebookIcon, ThumbsDown, VideoIcon, FolderIcon } from "lucide-react";
 import { title } from "process";
+import { resumeData as enData } from './i18n/en';
+import { resumeData as zhData } from './i18n/zh';
+
+export const getResumeData = (locale: string) => {
+  const i18nData = locale === 'zh' ? zhData : enData;
+
+  return {
+    ...i18nData,
+    initials: "PN",
+    url: "https://github.com/alongLFB",
+    locationLink: "https://www.google.com/maps/place/abu+dhabi",
+    avatarUrl: "/along ava3.jpg",
+    skills: [
+      "iOS Development",
+      "Objective-C",
+      "Swift",
+      "Python",
+      "Git",
+      "Linux",
+      "Rest API",
+      "AI API",
+    ],
+    // ...其他不需要翻译的数据
+  };
+};
 
 export const DATA = {
   name: "Along Li",
@@ -128,7 +153,7 @@ export const DATA = {
       company: "Tuya Inc.",
       href: "https://www.tuya.com/",
       badges: [],
-      location: "Santa Clara, CA",
+      location: "Hangzhou, China",
       title: "Software Engineer",
       logoUrl: "/nvidia.png",
       start: "October 2018",
@@ -140,13 +165,85 @@ export const DATA = {
       company: "ZheJiang Hexin Flush Network Services Ltd ",
       href: "https://www.10jqka.com.cn/",
       badges: [],
-      location: "San Jose, CA",
+      location: "Hangzhou, China",
       title: "Software Engineer",
       logoUrl: "/splunk.svg",
       start: "February 2017",
       end: "October 2018",
       description:
         "1. Responsible for the maintenance of the smart device camera panel, as well as the update and iteration of related functions.",
+    }
+  ],
+  jobs: [
+    {
+      "company": "腾讯科技",
+      "position": "高级前端工程师",
+      "duration": "2020年6月 - 2022年8月",
+      "location": "深圳",
+      "department": "微信支付部门",
+      "description": "负责微信支付前端系统的开发与维护，包括支付流程优化、性能监控和安全加固。主导了支付页面的重构项目，提升了页面加载速度30%。",
+      "achievements": [
+        "设计并实现了新的组件库，被5个内部项目采用",
+        "优化了支付流程，使转化率提升15%",
+        "主导前端性能监控系统搭建，覆盖99%的用户场景"
+      ],
+      "skills": ["React", "TypeScript", "微前端", "性能优化", "WebSocket"],
+      "companyLogo": "/images/tencent-logo.png",
+      "companyWebsite": "https://www.tencent.com",
+      "managers": ["张三（技术总监）", "李四（产品经理）"],
+      "links": [
+        {
+          "icon": "<GithubIcon className=\"h-3 w-3\" />",
+          "type": "项目仓库",
+          "href": "https://github.com/example/project"
+        },
+        {
+          "icon": "<FileTextIcon className=\"h-3 w-3\" />",
+          "type": "项目文档",
+          "href": "https://docs.example.com"
+        }
+      ]
+    },
+    {
+      "company": "阿里巴巴",
+      "position": "前端开发工程师",
+      "duration": "2018年7月 - 2020年5月",
+      "location": "杭州",
+      "department": "淘宝技术部",
+      "description": "参与淘宝购物车和结算页面的开发与优化。负责前端性能优化，实现了页面按需加载和资源预加载，大幅提升了用户体验。",
+      "achievements": [
+        "重构购物车页面，减少50%的DOM操作，页面渲染速度提升40%",
+        "开发结算页SDK，简化了跨团队协作流程",
+        "编写自动化测试脚本，测试覆盖率从60%提升到90%"
+      ],
+      "skills": ["Vue", "JavaScript", "Webpack", "Jest", "性能优化"],
+      "companyLogo": "/images/alibaba-logo.png",
+      "companyWebsite": "https://www.alibaba.com",
+      "managers": ["王五（前端负责人）"],
+      "links": [
+        {
+          "icon": "<ExternalLinkIcon className=\"h-3 w-3\" />",
+          "type": "项目演示",
+          "href": "https://demo.example.com"
+        }
+      ]
+    },
+    {
+      "company": "字节跳动",
+      "position": "前端实习生",
+      "duration": "2017年12月 - 2018年6月",
+      "location": "北京",
+      "department": "抖音技术团队",
+      "description": "参与抖音Web版的开发，主要负责用户评论组件和分享功能的实现。学习并实践了现代前端开发流程和工程化方案。",
+      "achievements": [
+        "独立开发了评论楼层展示组件，支持无限滚动和楼中楼回复",
+        "优化了分享链接的生成逻辑，提高了分享成功率15%"
+      ],
+      "skills": ["React", "Redux", "CSS3", "Git"],
+      "companyLogo": "/images/bytedance-logo.png",
+      "companyWebsite": "https://www.bytedance.com",
+      "managers": ["赵六（技术经理）"],
+      "links": []
     }
   ],
   education: [

@@ -1,0 +1,145 @@
+export const resumeData = {
+  name: "Along Li",
+  initials: "PN",
+  url: "https://github.com/alongLFB",
+  location: "Abu Dhabi, UAE",
+  locationLink: "https://www.google.com/maps/place/abu+dhabi",
+  description: "A rookie software engineer.",
+  summary:
+    "A Network Engineering graduate from [Xi'an University of Science and Technology](https://www.xust.edu.cn/), specialize in mobile development and am actively working on [open-source projects](https://github.com/alongLFB). I'm passionate about creating impactful solutions and sharing knowledge.",
+  avatarUrl: "/along ava3.jpg",
+  skills: [
+    "iOS Development",
+    "Objective-C",
+    "Swift",
+    "Python",
+    "Git",
+    "Linux",
+    "Rest API",
+    "AI API",
+  ],
+
+  work: [
+    {
+      company: "Bayanat",
+      badges: [],
+      href: "https://space42.ai/en",
+      location: "Abu Dhbai",
+      title: "Software Engineer",
+      logoUrl: "/shopify.svg",
+      start: "March 2021",
+      end: "now",
+      description:
+        "1. Develop Tarjamah business features and building reusable components.",
+    },
+    {
+      company: "Tuya Inc.",
+      href: "https://www.tuya.com/",
+      badges: [],
+      location: "Hangzhou, China",
+      title: "Software Engineer",
+      logoUrl: "/nvidia.png",
+      start: "October 2018",
+      end: "January 2021",
+      description:
+        "1. Responsible for the maintenance of the smart device camera panel, as well as the update and iteration of related functions.",
+    },
+    {
+      company: "ZheJiang Hexin Flush Network Services Ltd ",
+      href: "https://www.10jqka.com.cn/",
+      badges: [],
+      location: "Hangzhou, China",
+      title: "Software Engineer",
+      logoUrl: "/splunk.svg",
+      start: "February 2017",
+      end: "October 2018",
+      description:
+        "1. Responsible for the maintenance of the smart device camera panel, as well as the update and iteration of related functions.",
+    },
+  ],
+  jobs: [
+    {
+      company: "Bayanat",
+      position: "Software Engineer",
+      duration: "March 2021 - now",
+      location: "Abu Dhabi, UAE",
+      department: "Digital Factory",
+      description: "Develop iOS Applications and bug fixing for the project.",
+      achievements: [
+        "Develop Tarjamah business features and building reusable components.",
+        "Translate UI / UX designs into high quality code.",
+        "Explore and evaluate the practicality of new technologies to improve existing processes and/or products.",
+        "Write clean and maintainable code that is properly tested and reviewed.",
+        "Fix JIRA bugs and Write technical documents.",
+      ],
+      skills: ["iOS", "Swift", "json", "Restful API"],
+      companyLogo: "/images/tencent-logo.png",
+      companyWebsite: "https://space42.ai/en",
+      links: [
+        {
+          icon: "icon1",
+          type: "repository",
+          href: "https://github.com/example/project",
+        },
+        {
+          icon: "icon2",
+          type: "documentation",
+          href: "https://docs.example.com",
+        },
+      ],
+    },
+    {
+      company: "Tuya Inc.",
+      position: "Software Engineer",
+      duration: "October 2018 - January 2021",
+      location: "Hangzhou, China",
+      department: "iOS Development Team",
+      description:
+        "Develop iOS App for smart device camera panel, as well as the update and iteration of related functions.",
+      achievements: [
+        "Responsible for the maintenance of the smart device camera panel, as well as the update and iteration of related functions.",
+        "Design the storage plan for the project photos of the driving recorder, and the caching strategy adopts the LRU algorithm.",
+        "Simple understanding of camera audio and video related, the bottom SDK is responsible for audio and video capture on the device side, and the upper layer is responsible for parsing and rendering of video CMSampleBuffer.",
+      ],
+      skills: ["iOS", "Swift", "json", "Restful API"],
+      companyLogo: "/images/alibaba-logo.png",
+      companyWebsite: "https://www.tuya.com/",
+      links: [
+        {
+          icon: '<ExternalLinkIcon className="h-3 w-3" />',
+          type: "项目演示",
+          href: "https://demo.example.com",
+        },
+      ],
+    },
+    {
+      company: "ZheJiang Hexin Flush Network Services Ltd ",
+      position: "Software Engineer",
+      duration: "February 2017 - October 2018",
+      location: "Hangzhou, China",
+      department: "Mobile Development Team",
+      description:
+        "A software to view real-time stock market information and stock trading.",
+      achievements: [
+        "Draw the time-sharing view of call auction, using CAShapeLayer + UIBezierPath drawing method.",
+        "Have some basic understanding of other Core Graphic graphics related knowledge. When it comes to data that depends on multiple network requests, you can use the GCD queue group or semaphore to solve it.",
+        "The evaluation of the time required for the task may add 20% more redundant time after the evaluation to reduce possible delays or reduce other unexpected risks.",
+        "After all, personal abilities are limited. Know how to use team resources reasonably. For example, if you find that a task cannot be completed on time or is risky, first try to see if it can be solved by yourself, or if it doesn’t work, find a colleague or mentor to negotiate a better solution.",
+      ],
+      skills: ["iOS", "Swift", "json", "Restful API"],
+      companyLogo: "/images/bytedance-logo.png",
+      companyWebsite: "https://www.10jqka.com.cn/",
+      links: [],
+    },
+  ],
+  education: [
+    {
+      school: "Xi'an University of Science and Technology",
+      href: "https://www.xust.edu.cn/",
+      degree: "Network Engineering",
+      logoUrl: "/Xi'An_University_of_Science_and_Technology_Seal.svg",
+      start: "2013",
+      end: "2017",
+    },
+  ],
+};
