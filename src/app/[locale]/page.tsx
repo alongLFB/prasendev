@@ -130,7 +130,7 @@ export default function HomePage() {
                                     key={name}
                                     name={name}
                                     url={social.url}
-                                    icon={<social.icon />}
+                                    icon={<social.icon className="size-5" />}
                                     delay={BLUR_FADE_DELAY * 5 + idx * 0.05}
                                 />
                             ))}
