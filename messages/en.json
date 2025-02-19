@@ -5,9 +5,45 @@
     "description": "A rookie software engineer.",
     "about": "About",
     "skills": "Skills",
-    "projects": "Side Projects",
-    "contact": "Contact",
+    "projects": {
+      "title": "Side Projects",
+      "viewAll": "View All Projects →"
+    },
+    "contact": {
+      "title": "Contact:",
+      "emailIntro": "Feel free to reach out to me via email:",
+      "gmail": "Gmail",
+      "twitterChat": "Let's do a quick chat on X (Twitter)",
+      "talkOnX": "Talk on X"
+    },
     "workexperience": "Work Experience",
-    "education": "Education"
+    "education": "Education",
+    "collaborate": "Let's collaborate 🤝🏻",
+    "viewAllProjects": "View All Projects →",
+    "connect": {
+      "title": "Let's collaborate 🤝🏻"
+    },
+    "blog": {
+      "title": "Recent Blog Posts",
+      "readMore": "Read More Blogs"
+    },
+    "contributions": {
+      "title": "GitHub Contributions"
+    },
+    "contactMe": {
+      "title": "Contact:",
+      "emailIntro": "Feel free to reach out to me via email:",
+      "gmail": "Gmail",
+      "twitterChat": "Let's do a quick chat on X (Twitter)",
+      "talkOnX": "Talk on X"
+    },
+    "footer": {
+      "copyright": "Copyright © {year} {name}. All rights reserved."
+    }
+  },
+  "NotFound": {
+    "title": "Not Found",
+    "message": "Could not find the requested resource",
+    "returnHome": "Return Home"
   }
 }

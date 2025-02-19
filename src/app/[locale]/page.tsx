@@ -123,7 +123,7 @@ export default function HomePage() {
             <section id="connect">
                 <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
                     <div className="space-y-4">
-                        <h2 className="text-xl font-bold">Let's collaborate 🤝🏻</h2>
+                        <h2 className="text-xl font-bold">{t('connect.title')}</h2>
                         <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2">
                             {Object.entries(DATA.contact.social).map(([name, social], idx) => (
                                 <SocialIconLink
@@ -157,7 +157,7 @@ export default function HomePage() {
             {/* <section id="blogs">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Recent Blog Posts</h2>
+            <h2 className="text-xl font-bold">{t('blog.title')}</h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 10}>
             <div className="flex flex-col space-y-4">
@@ -184,7 +184,7 @@ export default function HomePage() {
                 <RainbowButton
                   className="w-full sm:w-[160px] px-4 py-2 group transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] font-bold text-sm"
                 >
-                  Read More Blogs
+                  {t('blog.readMore')}
                 </RainbowButton>
               </Link>
             </div>
@@ -214,14 +214,14 @@ export default function HomePage() {
 
             {/* <section id="contributions">
         <BlurFade delay={BLUR_FADE_DELAY * 10}>
-          <h2 className="text-xl font-bold">GitHub Contributions</h2>
+          <h2 className="text-xl font-bold">{t('contributions.title')}</h2>
           <GithubContributions />
         </BlurFade>
       </section> */}
             <section id="projects">
                 <div className="flex min-h-0 flex-col gap-y-3">
                     <BlurFade delay={BLUR_FADE_DELAY * 7}>
-                        <h2 className="text-xl font-bold">Side Projects</h2>
+                        <h2 className="text-xl font-bold">{t('projects.title')}</h2>
                     </BlurFade>
                     <BlurFade delay={BLUR_FADE_DELAY * 8}>
                         <div className="grid gap-4 sm:grid-cols-2">
@@ -240,7 +240,7 @@ export default function HomePage() {
                             <ShinyButton
                                 className="w-full sm:w-auto group transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] font-semibold"
                             >
-                                View All Projects →
+                                {t('projects.viewAll')}
                             </ShinyButton>
                         </Link>
                     </BlurFade>
@@ -274,19 +274,19 @@ export default function HomePage() {
             <section id="contact">
                 <BlurFade delay={BLUR_FADE_DELAY * 16}>
                     <div className="space-y-4">
-                        <h2 className="text-xl font-medium">Contact:</h2>
-                        <h2 className="text-xl font-medium">Feel free to reach out to me via email:</h2>
+                        <h2 className="text-xl font-medium">{t('contact.title')}</h2>
+                        <h2 className="text-xl font-medium">{t('contact.emailIntro')}</h2>
 
                         <a
                             href={DATA.contact.social.email.url}
                             className="flex items-center gap-2 underline underline-offset-4 hover:opacity-70 transition-opacity"
                         >
                             <Icons.email className="size-4" />
-                            Gmail
+                            {t('contact.gmail')}
                         </a>
 
                         <div className="mt-8">
-                            <h2 className="text-xl font-medium">Let's do a quick chat on X (Twitter)</h2>
+                            <h2 className="text-xl font-medium">{t('contact.twitterChat')}</h2>
 
                             <a
                                 href={DATA.contact.social.X.url}
@@ -294,7 +294,7 @@ export default function HomePage() {
                                 rel="noopener noreferrer"
                                 className="inline-block mt-4 px-4 py-2 rounded-md bg-foreground text-background hover:opacity-90 transition-opacity"
                             >
-                                Talk on X
+                                {t('contact.talkOnX')}
                             </a>
                         </div>
                     </div>

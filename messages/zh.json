@@ -5,9 +5,38 @@
     "description": "一名软件工程师新手。",
     "about": "关于我",
     "skills": "技能",
-    "projects": "个人项目",
-    "contact": "联系我",
+    "projects": {
+      "title": "个人项目",
+      "viewAll": "查看所有项目 →"
+    },
+    "contact": {
+      "title": "联系方式：",
+      "emailIntro": "欢迎通过邮件联系我：",
+      "gmail": "邮箱",
+      "twitterChat": "让我们在 X (Twitter) 上聊天吧",
+      "talkOnX": "在 X 上交谈"
+    },
     "workexperience": "工作经历",
-    "education": "教育经历"
+    "education": "教育经历",
+    "collaborate": "让我们合作吧 🤝🏻",
+    "viewAllProjects": "查看所有项目 →",
+    "connect": {
+      "title": "让我们合作吧 🤝🏻"
+    },
+    "blog": {
+      "title": "最新博客文章",
+      "readMore": "阅读更多博客"
+    },
+    "contributions": {
+      "title": "GitHub 贡献"
+    },
+    "footer": {
+      "copyright": "版权所有 © {year} {name}。保留所有权利。"
+    }
+  },
+  "NotFound": {
+    "title": "未找到页面",
+    "message": "无法找到请求的资源",
+    "returnHome": "返回首页"
   }
 }
