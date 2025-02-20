@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { Icons, getCompanyLogo } from "@/components/icons";
 
 interface WorkExperienceProps {
     company: string;
@@ -23,8 +24,10 @@ interface WorkExperienceProps {
     companyWebsite?: string;
     department?: string;
     links?: readonly {
-        icon: React.ReactNode;
-        type: string;
+        logoName: string;
+        logoType: string;
+        src?: string;
+        linkName: string;
         href: string;
     }[];
     className?: string;
@@ -57,13 +60,6 @@ export function WorkExperienceCard({
                         target="_blank"
                         className="mr-4 flex-shrink-0"
                     >
-                        {/* <Image
-                            src={companyLogo}
-                            alt={`${company} logo`}
-                            width={60}
-                            height={60}
-                            className="h-12 w-12 rounded-md object-contain"
-                        /> */}
                         {companyLogo}
                     </Link>
                 )}
@@ -152,8 +148,9 @@ export function WorkExperienceCard({
                         {links.map((link, idx) => (
                             <Link href={link?.href} key={idx} target="_blank">
                                 <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
-                                    {link.icon}
-                                    {link.type}
+                                    {/* {getCompanyLogo({ logoName: link.logoName, logoType: link.logoType as "svg" | "image" })} */}
+                                    {/* {link.logoName} */}
+                                    {link.linkName}
                                 </Badge>
                             </Link>
                         ))}

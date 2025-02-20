@@ -217,7 +217,7 @@ export default function HomePage({
                                     description={job.description}
                                     achievements={[...job.achievements]}
                                     skills={[...job.skills]}
-                                    companyLogo={getCompanyLogo(job.companyLogo)}
+                                    companyLogo={getCompanyLogo({ logoName: job.companyLogo.logoName ?? 'defaultLogoName', logoType: job.companyLogo.logoType as "svg" | "image" })}
                                     companyWebsite={job.companyWebsite}
                                     department={job.department}
                                     links={job.links}

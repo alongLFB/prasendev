@@ -1,10 +1,33 @@
+import { log } from "console";
 import { GlobeIcon, MailIcon, FolderIcon } from "lucide-react";
+import Image from 'next/image';
+
+type CompanyLogoType = {
+  logoType: 'svg' | 'image';
+  logoName: string;
+  src?: string;
+};
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
-export const getCompanyLogo = (logoKey: string, props?: IconProps) => {
-  if (logoKey in Icons) {
-    const IconComponent = Icons[logoKey as keyof typeof Icons];
+export const getCompanyLogo = (logo: CompanyLogoType, props?: IconProps) => {
+
+  if (!logo) return undefined;
+
+  if (logo.logoType === 'image') {
+    return (
+      <Image
+        src={logo.src || `/${logo.logoName}.png`}
+        alt={`${logo.logoName} logo`}
+        width={60}
+        height={60}
+        className="object-contain"
+      />
+    );
+  }
+
+  if (logo.logoName in Icons) {
+    const IconComponent = Icons[logo.logoName as keyof typeof Icons];
     return <IconComponent {...props} />;
   }
   return undefined;

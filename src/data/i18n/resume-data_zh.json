@@ -33,18 +33,23 @@
         "Fix JIRA bugs and Write technical documents."
       ],
       "skills": ["iOS", "Swift", "json", "Restful API"],
-      "companyLogo": "space42",
+      "companyLogo": {
+        "logoName": "space42",
+        "logoType": "svg"
+      },
       "companyWebsite": "https://space42.ai/en",
       "links": [
         {
-          "icon": "icon1",
-          "type": "repository",
-          "href": "https://github.com/example/project"
+          "logoName": "space42",
+          "logoType": "svg",
+          "linkName": "Tarjamah",
+          "href": "https://apps.apple.com/ae/app/tarjamah/id1603832120"
         },
         {
-          "icon": "icon2",
-          "type": "documentation",
-          "href": "https://docs.example.com"
+          "logoName": "space42",
+          "logoType": "svg",
+          "linkName": "TXAI",
+          "href": "https://apps.apple.com/us/app/txai/id6444462528"
         }
       ]
     },
@@ -62,13 +67,23 @@
         "摄像头音视频相关的简单了解，底层SDK负责设备端音视频采集，上层负责视频 CMSampleBuffer 的解析与渲染。"
       ],
       "skills": ["iOS", "Swift", "json", "Restful API"],
-      "companyLogo": "tuya",
+      "companyLogo": {
+        "logoName": "tuya",
+        "logoType": "svg"
+      },
       "companyWebsite": "https://www.tuya.com/",
       "links": [
         {
-          "icon": "<ExternalLinkIcon className='h-3 w-3' />",
-          "type": "项目演示",
-          "href": "https://demo.example.com"
+          "logoName": "tuya",
+          "logoType": "svg",
+          "linkName": "Tuya Smart",
+          "href": "https://apps.apple.com/us/app/tuya-smart/id1034649547"
+        },
+        {
+          "logoName": "tuya",
+          "logoType": "svg",
+          "linkName": "涂鸦",
+          "href": "https://apps.apple.com/cn/app/%E6%B6%82%E9%B8%A6/id1586116399"
         }
       ]
     },
@@ -87,9 +102,21 @@
         "个人能力毕竟有限,要懂得合理利用团队资源.如:发现任务不能按期完成或者有风险,先尝试自己是否可以解决,还是不行的话,找同事或者导师一起协商更好的解决方案。"
       ],
       "skills": ["iOS", "Swift", "json", "Restful API"],
-      "companyLogo": "/images/bytedance-logo.png",
+      "companyLogo": {
+        "logoName": "Tonghuashun",
+        "logoType": "image",
+        "src": "https://imgbed.alonglfb.com/file/1740046873131_Tonghuashun.png"
+      },
       "companyWebsite": "https://www.10jqka.com.cn/",
-      "links": []
+      "links": [
+        {
+          "logoName": "Tonghuashun",
+          "logoType": "image",
+          "src": "https://imgbed.alonglfb.com/file/1740046873131_Tonghuashun.png",
+          "linkName": "同花顺",
+          "href": "https://apps.apple.com/us/app/%E5%90%8C%E8%8A%B1%E9%A1%BA-%E7%82%92%E8%82%A1-%E8%82%A1%E7%A5%A8/id303191318"
+        }
+      ]
     }
   ],
   "education": [

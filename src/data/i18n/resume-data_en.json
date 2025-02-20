@@ -33,18 +33,23 @@
         "Fix JIRA bugs and Write technical documents."
       ],
       "skills": ["iOS", "Swift", "json", "Restful API"],
-      "companyLogo": "space42",
+      "companyLogo": {
+        "logoName": "space42",
+        "logoType": "svg"
+      },
       "companyWebsite": "https://space42.ai/en",
       "links": [
         {
-          "icon": "icon1",
-          "type": "repository",
-          "href": "https://github.com/example/project"
+          "logoName": "space42",
+          "logoType": "svg",
+          "linkName": "Tarjamah",
+          "href": "https://apps.apple.com/ae/app/tarjamah/id1603832120"
         },
         {
-          "icon": "icon2",
-          "type": "documentation",
-          "href": "https://docs.example.com"
+          "logoName": "space42",
+          "logoType": "svg",
+          "linkName": "TXAI",
+          "href": "https://apps.apple.com/us/app/txai/id6444462528"
         }
       ]
     },
@@ -62,13 +67,23 @@
         "Simple understanding of camera audio and video related, the bottom SDK is responsible for audio and video capture on the device side, and the upper layer is responsible for parsing and rendering of video CMSampleBuffer."
       ],
       "skills": ["iOS", "Swift", "json", "Restful API"],
-      "companyLogo": "tuya",
+      "companyLogo": {
+        "logoName": "tuya",
+        "logoType": "svg"
+      },
       "companyWebsite": "https://www.tuya.com/",
       "links": [
         {
-          "icon": "<ExternalLinkIcon className=\"h-3 w-3\" />",
-          "type": "项目演示",
-          "href": "https://demo.example.com"
+          "logoName": "tuya",
+          "logoType": "svg",
+          "linkName": "Tuya Smart",
+          "href": "https://apps.apple.com/us/app/tuya-smart/id1034649547"
+        },
+        {
+          "logoName": "tuya",
+          "logoType": "svg",
+          "linkName": "涂鸦",
+          "href": "https://apps.apple.com/cn/app/%E6%B6%82%E9%B8%A6/id1586116399"
         }
       ]
     },
@@ -87,9 +102,21 @@
         "After all, personal abilities are limited. Know how to use team resources reasonably. For example, if you find that a task cannot be completed on time or is risky, first try to see if it can be solved by yourself, or if it doesn’t work, find a colleague or mentor to negotiate a better solution."
       ],
       "skills": ["iOS", "Swift", "json", "Restful API"],
-      "companyLogo": "/images/bytedance-logo.png",
+      "companyLogo": {
+        "logoName": "Tonghuashun",
+        "logoType": "image",
+        "src": "https://imgbed.alonglfb.com/file/1740046873131_Tonghuashun.png"
+      },
       "companyWebsite": "https://www.10jqka.com.cn/",
-      "links": []
+      "links": [
+        {
+          "logoName": "Tonghuashun",
+          "logoType": "image",
+          "src": "https://imgbed.alonglfb.com/file/1740046873131_Tonghuashun.png",
+          "linkName": "同花顺",
+          "href": "https://apps.apple.com/us/app/%E5%90%8C%E8%8A%B1%E9%A1%BA-%E7%82%92%E8%82%A1-%E8%82%A1%E7%A5%A8/id303191318"
+        }
+      ]
     }
   ],
   "education": [
