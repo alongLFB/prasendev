@@ -3,11 +3,11 @@ import { Description } from "@radix-ui/react-dialog";
 import { url } from "inspector";
 import { HomeIcon, NotebookIcon, ThumbsDown, VideoIcon, FolderIcon } from "lucide-react";
 import { title } from "process";
-import { resumeData as enData } from './i18n/en';
-import { resumeData as zhData } from './i18n/zh';
+import resumeDataEn from '../data/i18n/resume-data_en.json'
+import resumeDataZh from '../data/i18n/resume-data_zh.json'
 
 export const getResumeData = (locale: string) => {
-  const i18nData = locale === 'zh' ? zhData : enData;
+  const i18nData = locale === 'zh' ? resumeDataZh : resumeDataEn;
 
   return {
     ...i18nData,

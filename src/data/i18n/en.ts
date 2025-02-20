@@ -18,45 +18,6 @@ export const resumeData = {
     "Rest API",
     "AI API",
   ],
-
-  work: [
-    {
-      company: "Bayanat",
-      badges: [],
-      href: "https://space42.ai/en",
-      location: "Abu Dhbai",
-      title: "Software Engineer",
-      logoUrl: "/shopify.svg",
-      start: "March 2021",
-      end: "now",
-      description:
-        "1. Develop Tarjamah business features and building reusable components.",
-    },
-    {
-      company: "Tuya Inc.",
-      href: "https://www.tuya.com/",
-      badges: [],
-      location: "Hangzhou, China",
-      title: "Software Engineer",
-      logoUrl: "/nvidia.png",
-      start: "October 2018",
-      end: "January 2021",
-      description:
-        "1. Responsible for the maintenance of the smart device camera panel, as well as the update and iteration of related functions.",
-    },
-    {
-      company: "ZheJiang Hexin Flush Network Services Ltd ",
-      href: "https://www.10jqka.com.cn/",
-      badges: [],
-      location: "Hangzhou, China",
-      title: "Software Engineer",
-      logoUrl: "/splunk.svg",
-      start: "February 2017",
-      end: "October 2018",
-      description:
-        "1. Responsible for the maintenance of the smart device camera panel, as well as the update and iteration of related functions.",
-    },
-  ],
   jobs: [
     {
       company: "Bayanat",

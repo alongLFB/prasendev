@@ -16,7 +16,7 @@ import Image from "next/image";
 import Markdown from "react-markdown";
 import { FeaturedGadgets } from "@/components/gadgets/featured-gadgets";
 import { Metadata } from 'next';
-import { Icons } from "@/components/icons";
+import { Icons, getCompanyLogo } from "@/components/icons";
 import ShinyButton from "@/components/ui/shiny-button";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { SocialIconLink } from "@/components/social-icon-link";
@@ -217,7 +217,7 @@ export default function HomePage({
                                     description={job.description}
                                     achievements={[...job.achievements]}
                                     skills={[...job.skills]}
-                                    companyLogo={job.companyLogo}
+                                    companyLogo={getCompanyLogo(job.companyLogo)}
                                     companyWebsite={job.companyWebsite}
                                     department={job.department}
                                     links={job.links}

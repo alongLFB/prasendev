@@ -19,7 +19,7 @@ interface WorkExperienceProps {
     description: string;
     achievements?: string[];
     skills?: string[];
-    companyLogo?: string;
+    companyLogo?: React.ReactElement | null;
     companyWebsite?: string;
     department?: string;
     links?: readonly {
@@ -57,13 +57,14 @@ export function WorkExperienceCard({
                         target="_blank"
                         className="mr-4 flex-shrink-0"
                     >
-                        <Image
+                        {/* <Image
                             src={companyLogo}
                             alt={`${company} logo`}
                             width={60}
                             height={60}
                             className="h-12 w-12 rounded-md object-contain"
-                        />
+                        /> */}
+                        {companyLogo}
                     </Link>
                 )}
                 <div>
